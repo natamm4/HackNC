@@ -2,36 +2,60 @@ body, html {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;  /* vertically */
-  justify-content: center; /* horizontally */
+  flex-direction: column; /* Stacks the title and main vertically */
+  align-items: center;
+  justify-content: center;
   height: 100vh; 
   background-color: #ABC8D9;
+  text-align: center; /* Centers content horizontally */
 }
 
-main {
+#title {
+  font-size: 4em;
+  margin-bottom: 30px;
+}
+
+#main_shadow_box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  border: 1px solid;
+  padding: 100px;
+  border-radius: 2rem;
 }
 
-#title {
-  font-size: 2em;
-  margin-bottom: 20px;
+.main_buttons{
+  display: flex;
+  flex-direction: row;
+}
+
+#loginForm {
+  display: none; /* hidden until clicked */
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginForm input {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 1em;
+  width: 200px;
+  border-radius: .25rem;
+  border: 1px solid #ccc;
 }
 
 button {
   margin: 10px 0;
-  padding: 10px 20px;
-  font-size: 1em;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  border-radius: .25rem;
 }
 
-#main_shadow_box{
-  border: 1px solid;
-  padding: 200px 100px;
-  box-shadow: 2px 2px 2px 2px#888888;
-  border-radius: 2rem;
+#login{
+  margin-right: 20px;
 }
 
 .footertext {

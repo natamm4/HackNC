@@ -8,19 +8,27 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <!--logo? banner?-->
-    </header>
+
+  <div id="title">Heels & Meals</div>
 
   <main>
     <!--Buttons for login, about-->
     <div id = "main_shadow_box">
-    <h1 id = "title">
-        Heels & Meals
-    </h1>
-    <button type="button">Log In</button>
+      <div class = "main_buttons">
+    <button id = "login" type="button" onclick="toggleLoginForm()">Log In</button>
     <!--directs to onyen page most likely-->
-    <button type="button">About</button>
+    <button id = "about" type="button" onclick="toggleAboutInfo()">About</button>
+  </div>
+    <div id="loginForm" style="display:none;">
+      <input type="text" id="username" placeholder="ONYEN">
+      <input type="password" id="password" placeholder="Password">
+      <form action="home.html" method="get">
+        <button type="submit">Continue</button>
+      </form><!--change to go to home page-->
+    </div>
+    <div id="aboutinfo" style="display:none;">
+      <p>Information here about Heels & Meels and how students can use it!</p>
+    </div>
 </div>
   </main>
 
@@ -30,5 +38,6 @@
         &copy; Heels&Meals
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
