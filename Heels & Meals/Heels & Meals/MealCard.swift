@@ -15,6 +15,9 @@ struct MealCard: Codable, Identifiable {
     let price: String
     let distance: String
     let image: String
+    let description: String
+    let location: String
+    let dietaryRestrictions: [String]
     
     // Add CodingKeys to map JSON fields to our properties
     enum CodingKeys: String, CodingKey {
@@ -25,5 +28,8 @@ struct MealCard: Codable, Identifiable {
         case price
         case distance
         case image
+        case description
+        case location
+        case dietaryRestrictions
     }
 }

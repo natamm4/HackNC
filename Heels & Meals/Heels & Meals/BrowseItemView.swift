@@ -14,9 +14,10 @@ struct BrowseItemView: View {
         VStack(spacing: 8) {
             Image(mealCard.image)
                 .resizable()
-                .scaledToFit()
+                .aspectRatio(contentMode: .fill)
                 .frame(height: 150)
-                .frame(maxWidth: .infinity)
+                .clipped()
+                .cornerRadius(10, corners: [.topLeft, .topRight])
             
             Text("\(mealCard.itemTitle) - \(mealCard.storeName)")
                 .font(.subheadline)
@@ -42,7 +43,7 @@ struct BrowseItemView: View {
                 .font(.caption)
                 .lineLimit(1)
         }
-        .padding()
+        .padding(.bottom)
         .frame(width: 170, height: 300)
         .background(Color.white)
         .cornerRadius(10)
@@ -51,15 +52,44 @@ struct BrowseItemView: View {
 }
 
 extension MealCard {
-    static let example = MealCard(
-        id: 1,
-        storeName: "Roots",
-        itemTitle: "Mystery Vegetarian Bowl",
-        pickupTime: "5:00 PM - 7:00 PM",
-        price: "$5.00",
-        distance: "2 miles",
-        image: "vegan_salad.png"
-    )
+    static var example: MealCard {
+        if let url = Bundle.main.url(forResource: "meal-cards", withExtension: "json"),
+           let data = try? Data(contentsOf: url),
+           let mealCards = try? JSONDecoder().decode([MealCard].self, from: data),
+           let firstMeal = mealCards.first {
+            return firstMeal
+        }
+        
+        // Fallback data in case JSON loading fails
+        return MealCard(
+            id: 1,
+            storeName: "Roots",
+            itemTitle: "Mystery Vegetarian Bowl",
+            pickupTime: "5:00 PM - 7:00 PM",
+            price: "$5.00",
+            distance: "2 miles",
+            image: "RootsBowl",
+            description: "A hearty vegetarian bowl featuring seasonal roasted vegetables.",
+            location: "133 W Franklin St Suite A-115, Chapel Hill, NC 27516",
+            dietaryRestrictions: ["Vegetarian"]
+        )
+    }
+}
+
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape(RoundedCorner(radius: radius, corners: corners))
+    }
+}
+
+struct RoundedCorner: Shape {
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
 }
 
 #Preview {

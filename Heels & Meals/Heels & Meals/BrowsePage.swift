@@ -21,7 +21,9 @@ struct BrowsePage: View {
                         GridItem(.flexible(), spacing: 16)
                     ], spacing: 16) {
                         ForEach(mealCards) { card in
-                            BrowseItemView(mealCard: card)
+                            NavigationLink(destination: ClickedItemView(mealCard: card)) {
+                                BrowseItemView(mealCard: card)
+                            }
                         }
                     }
                     .padding()
