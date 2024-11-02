@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -8,11 +13,17 @@ body, html {
   height: 100vh; 
   background-color: #ABC8D9;
   text-align: center; /* Centers content horizontally */
+
 }
 
 #title {
   font-size: 4em;
   margin-bottom: 30px;
+  color: #345678;
+}
+
+button {
+  cursor: pointer;
 }
 
 #main_shadow_box {
@@ -21,9 +32,10 @@ body, html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 1px solid;
+  border: 2px solid;
   padding: 100px;
   border-radius: 2rem;
+  color: #345678;
 }
 
 .main_buttons{
@@ -88,4 +100,16 @@ button {
 
 #paymentForm button {
     width: 100%;       /* Make button match input width */
+}
+
+.navButtons{
+  cursor: pointer;
+  color:#345678;
+}
+
+#submitButton{
+  background-color: #89A2B8;
+  border-radius: .25rem;
+  color: #345678;
+  border: 2px solid #345678;
 }
