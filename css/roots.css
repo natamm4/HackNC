@@ -3,6 +3,11 @@ body, html {
     background-color: #F4F5F5;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 /* The hero image */
 .roots-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/roots-banner.jpg");
@@ -20,12 +25,11 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #F4F5F5;
   font-size: 3em;
 }
 
 .footertext {
-    position: fixed;
     bottom: 0;
     left: 0;
     padding: 20px;
@@ -38,6 +42,7 @@ body, html {
     flex-direction: row;
     justify-content: space-between;
     margin: 20px;
+    margin-top: 50px;
 }
 
 .information{
@@ -48,9 +53,87 @@ body, html {
 #price{
     margin-right: 100px;
     font-size: 3em;
+    padding: 20px;
+    background-color: #ABC8D9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
 }
 
-.roots-informatin{
-    display: flex;
-    justify-items: center;
+#price:hover {
+    transform: scale(1.05);
+}
+
+.roots-information {
+  max-width: 600px;
+  width: 100%; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2em;
+  text-align: center;
+  border: 2px solid #333; 
+  border-radius: 10px; 
+  padding: 20px;
+}
+
+.roots-information {
+    padding: 20px;
+    background-color: #F4F5F5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+    width: 200px;
+    margin: 5px;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border-radius: 6px;
+    margin-top: 50px;
+    background-color: #988678;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #D9C0AB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reserve{
+  display: flex;
+  justify-content: center;
+}
+
+.maps{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.infoandreserve{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
