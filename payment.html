@@ -5,18 +5,23 @@
     <title>Heels&Meels - Payment</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div id="title">Payment</div>
 
     <main>
         <div id="main_shadow_box">
+            <div class="navButtons">
+                <span class="material-icons" onclick="window.location.href='home.html'">home</span>
+                <span class="material-icons" onclick="window.history.back()">arrow_back</span>
+            </div>
             <div id="paymentForm">
                 <input type="text" placeholder="Card Number">
                 <input type="text" placeholder="MM/YY">
                 <input type="text" placeholder="CVV">
                 <input type="text" placeholder="Cardholder Name">
-                <button type="button" onclick="showConfirmation()">Submit Payment</button>
+                <button id="submitButton"type="button" onclick="showConfirmation()">Submit Payment</button>
             </div>
             <div id="confirmationMessage" style="display:none;">
                 <p>Payment Successful!</p>
