@@ -1,0 +1,23 @@
+.card{
+width: 43%; 
+height: 25vh;
+min-width: 250px;
+font-size: 3em;
+padding: 20px;
+background-color: #ABC8D9;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+border: 1px solid #e0e0e0;
+transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
