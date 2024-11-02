@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -8,11 +13,16 @@ body, html {
   height: 100vh; 
   background-color: #ABC8D9;
   text-align: center; /* Centers content horizontally */
+
 }
 
 #title {
   font-size: 4em;
   margin-bottom: 30px;
+}
+
+button {
+  cursor: pointer;
 }
 
 #main_shadow_box {
