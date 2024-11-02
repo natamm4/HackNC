@@ -1,0 +1,44 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;  /* vertically */
+  justify-content: center; /* horizontally */
+  height: 100vh; 
+  background-color: #ABC8D9;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+#main_shadow_box{
+  border: 1px solid;
+  padding: 200px 100px;
+  box-shadow: 2px 2px 2px 2px#888888;
+  border-radius: 2rem;
+}
+
+.footertext {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #333;
+}
