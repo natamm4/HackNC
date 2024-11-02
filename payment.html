@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Heels&Meels - Payment</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="title">Payment</div>
+
+    <main>
+        <div id="main_shadow_box">
+            <div id="paymentForm">
+                <input type="text" placeholder="Card Number">
+                <input type="text" placeholder="MM/YY">
+                <input type="text" placeholder="CVV">
+                <input type="text" placeholder="Cardholder Name">
+                <button type="button" onclick="showConfirmation()">Submit Payment</button>
+            </div>
+            <div id="confirmationMessage" style="display:none;">
+                <p>Payment Successful!</p>
+                <p>Your order will be ready for pickup at <span id="pickupTime"></span></p>
+                <form action="home.html" method="get">
+                    <button type="submit">Return Home</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footertext">&copy; Heels&Meals</p>
+    </footer>
+
+    <script>
+        function showConfirmation() {
+            // Hide payment form
+            document.getElementById('paymentForm').style.display = 'none';
+            // Show confirmation
+            document.getElementById('confirmationMessage').style.display = 'block';
+            // Calculate pickup time (20 minutes from now)
+            const pickupTime = new Date(new Date().getTime() + 20 * 60000);
+            document.getElementById('pickupTime').textContent = 
+                pickupTime.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        }
+    </script>
+</body>
+</html>
