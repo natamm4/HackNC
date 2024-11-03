@@ -10,7 +10,7 @@ As a part of our project, we created an ios app and a website platform.
 
 ## Languages Used
 
-**Frontend:** HTML, CSS, JavaScript, Swift
+**Frontend:** HTML, CSS, JavaScript, Swift, JSON
 
 ### Resources
 
