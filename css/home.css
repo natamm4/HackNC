@@ -86,7 +86,7 @@ button{
 /* RESTAURANT BUSINESS CARDS */
 
 .card{
-    width: calc(50% - 20px); 
+    width: calc(40% - 20px); 
     height: 35vh;
     min-width: 250px;
     font-size: 1em;
@@ -108,7 +108,7 @@ button{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: center; */
+    justify-content: center; 
     gap: 10px;
     padding: 10px;
 }
@@ -137,6 +137,7 @@ button{
     /* OR */
     margin-top: -30px;
 }
+
 
 .card-title{
     font-size: larger;
