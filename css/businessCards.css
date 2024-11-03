@@ -30,7 +30,7 @@ transition: transform 0.3s ease;
 
 .card-image {
     flex: 1;
-    min-height: 200px; /* Adjust as needed */
+    min-height: 200px; 
 }
 
 .card-image img {
@@ -42,30 +42,28 @@ transition: transform 0.3s ease;
 .card-text {
     flex: 1;
     padding: 20px;
-    padding-top: 10px;  /* Reduce top padding */
-    /* OR */
+    padding-top: 10px; 
     margin-top: -30px;
 }
 
 .price-distance {
     display: flex;
-    justify-content: space-evenly;  /* Spreads items apart */
-    /* OR */
-    gap: 20px;  /* Fixed space between items */
+    justify-content: space-evenly;  
+    gap: 20px;  
 }
 .filters {
-    margin-top: auto;  /* This pushes the filters to the bottom */
+    margin-top: auto;  
     display: flex;
-    justify-content: center;  /* Centers the filters horizontally */
-    gap: 10px;  /* Adds space between filter items */
+    justify-content: center;  
+    gap: 10px;  
     width: 100%;
 }
 
 .filters p {
     margin: 0;
     padding: 4px 8px;
-    background-color: #f0f0f0;  /* Optional: adds a background to each filter */
-    border-radius: 4px;  /* Optional: rounds the corners */
+    background-color: #f0f0f0;  
+    border-radius: 4px;  
 }
 
 .time {
