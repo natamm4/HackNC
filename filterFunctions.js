@@ -2,8 +2,8 @@
 let mealCards = [];
 let filteredCards = [];
 let activeFilters = {
-    diet: null,
-    vendor: null
+    diet: [],
+    vendor: []
 };
 
 // Wait for DOM to load before running any code
@@ -64,27 +64,26 @@ function displayMealCards(cards) {
 }
 
 function filterByDiet(restriction) {
-    // Toggle filter if clicking the same button
-    if (activeFilters.diet === restriction) {
-        activeFilters.diet = null;
+    const index = activeFilters.diet.indexOf(restriction);
+    if (index > -1) {
+        activeFilters.diet.splice(index, 1); // Remove if exists
     } else {
-        activeFilters.diet = restriction;
+        activeFilters.diet.push(restriction); // Add if doesn't exist
     }
     
-    // Update button states
     updateFilterButtons();
     applyFilters();
 }
 
 function filterByVendor(vendorType) {
-    // Toggle filter if clicking the same button
-    if (activeFilters.vendor === vendorType) {
-        activeFilters.vendor = null;
+    // Toggle filter by adding/removing from array
+    const index = activeFilters.vendor.indexOf(vendorType);
+    if (index > -1) {
+        activeFilters.vendor.splice(index, 1); // Remove if exists
     } else {
-        activeFilters.vendor = vendorType;
+        activeFilters.vendor.push(vendorType); // Add if doesn't exist
     }
     
-    // Update button states
     updateFilterButtons();
     applyFilters();
 }
@@ -92,25 +91,29 @@ function filterByVendor(vendorType) {
 function applyFilters() {
     let filtered = [...mealCards];
     
-    if (activeFilters.diet) {
+    if (activeFilters.diet.length > 0) {
         filtered = filtered.filter(card => {
-            switch(activeFilters.diet) {
-                case 'Vegetarian':
-                    return card.isVegetarian;
-                case 'Vegan':
-                    return card.isVegan;
-                case 'Gluten-Free':
-                    return card.isGlutenFree;
-                case 'Lactose-Free':
-                    return card.isLactoseFree;
-                default:
-                    return true;
-            }
+            return activeFilters.diet.every(diet => {
+                switch(diet) {
+                    case 'Vegetarian':
+                        return card.isVegetarian;
+                    case 'Vegan':
+                        return card.isVegan;
+                    case 'Gluten-Free':
+                        return card.isGlutenFree;
+                    case 'Lactose-Free':
+                        return card.isLactoseFree;
+                    default:
+                        return true;
+                }
+            });
         });
     }
     
-    if (activeFilters.vendor) {
-        filtered = filtered.filter(card => card.vendorType === activeFilters.vendor);
+    if (activeFilters.vendor.length > 0) {
+        filtered = filtered.filter(card => 
+            activeFilters.vendor.includes(card.vendorType)
+        );
     }
     
     filteredCards = filtered;
@@ -123,19 +126,20 @@ function updateFilterButtons() {
         button.classList.remove('active');
     });
     
-    // Add active class to selected filters
-    if (activeFilters.diet) {
-        document.querySelector(`button[onclick="filterByDiet('${activeFilters.diet}')"]`)?.classList.add('active');
-    }
-    if (activeFilters.vendor) {
-        document.querySelector(`button[onclick="filterByVendor('${activeFilters.vendor}')"]`)?.classList.add('active');
-    }
+    // Add active class to all selected filters
+    activeFilters.diet.forEach(diet => {
+        document.querySelector(`button[onclick="filterByDiet('${diet}')"]`)?.classList.add('active');
+    });
+    
+    activeFilters.vendor.forEach(vendor => {
+        document.querySelector(`button[onclick="filterByVendor('${vendor}')"]`)?.classList.add('active');
+    });
 }
 
 function clearFilters() {
     activeFilters = {
-        diet: null,
-        vendor: null
+        diet: [],
+        vendor: []
     };
     
     // Remove active class from all filter buttons
