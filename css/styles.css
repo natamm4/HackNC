@@ -113,3 +113,13 @@ button {
   color: #345678;
   border: 2px solid #345678;
 }
+
+#aboutinfo{
+  display: none;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 15px;
+}

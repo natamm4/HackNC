@@ -2,6 +2,12 @@ html, body{
     background-color: #F4F5F5;
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
 .headerbox{
     background-color: #ABC8D9;
     display: flex;
@@ -12,9 +18,37 @@ html, body{
 #titlebox{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+}
+.nav-button {
+    background-color: #345678;  /* Changed to a nice blue color */
+    color: white;
+    border: none;
+    padding: 14px 28px;  /* Slightly larger padding */
+    border-radius: 30px;  /* More rounded corners */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;  /* Slightly bolder text */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* More pronounced shadow */
+    text-transform: uppercase;  /* Uppercase text */
+    letter-spacing: 1px;  /* Spread letters slightly */
 }
 
-.navigation{
+.nav-button:hover {
+    background-color: #89A2B8;
+    color: black;  /* Lighter blue on hover */
+    transform: translateY(-3px);  /* Slightly more lift */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);  /* Larger shadow on hover */
+}
+
+.nav-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navigation {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -27,20 +61,145 @@ button{
     padding: 10px 20px;
     font-size: 1em;
     border-radius: .15rem;
-    cursor: pointer;
-    background-color: #F4F5F5;
-    border: none;
-}
-
-button:hover{
-    background-color: #ABC8D9;
 }
 
 .footertext {
-    position: fixed;
     bottom: 0;
     left: 0;
     padding: 20px;
     font-size: 0.9em;
     color: #333;
   }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #logo{
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+  }
+
+/* RESTAURANT BUSINESS CARDS */
+
+.card{
+    width: calc(50% - 20px); 
+    height: 35vh;
+    min-width: 250px;
+    font-size: 1em;
+    padding: 20px;
+    margin: 0px;
+    background-color: #ABC8D9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.meal-cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-image {
+    flex: 1;
+    min-height: 200px; /* Adjust as needed */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    flex: 1;
+    padding: 20px;
+    padding-top: 10px;  /* Reduce top padding */
+    /* OR */
+    margin-top: -30px;
+}
+
+.card-title{
+    font-size: larger;
+}
+
+.price-distance {
+    display: flex;
+    justify-content: space-evenly;  /* Spreads items apart */
+    /* OR */
+    gap: 20px;  /* Fixed space between items */
+}
+.filter-tag{
+    display: inline-block;
+    padding: 2px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background-color: #C4D4E0;
+    color: #345678;
+    border: 1px solid #ddd;
+}
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.filters p {
+    margin: 0;
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+}
+.description {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-top: -10px;
+}
+.title {
+    font-size: 1.5em;
+}
+
+/* FILTER BUTTONS */
+
+.filterButtonContainer{
+    display: flex;
+    justify-content: center;
+    background-color: #F4F5F5;
+}
+
+.filterButton:hover{
+    background-color: #ABC8D9;
+}

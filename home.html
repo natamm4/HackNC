@@ -6,6 +6,7 @@
     <meta name="author" content="Adtile">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/home.css">
+    <script src="../filterFunctions.js"></script>
 
 </head>
 <body>
@@ -13,18 +14,19 @@
         <div id = "titlebox" 
         onclick="window.location.href='index.html'"
         style="cursor: pointer;">
+        <img src="heels_and_meals_logo.png" alt="Heels & Meals Logo" id="logo">
         <h1 id = "title">
             Heels & Meals
         </h1>
     </div>
     <div class = "navigation">
-        <button id = "Browse" type="button" onclick="toggleBrowse()">Browse</button>
-        <button id = "Favorites" type="button" onclick="toggleFavorites()">Favorites</button>
-        <button id = "About_Us" type="button" onclick="toggleAboutUs()">About Us</button>
+        <button class = "nav-button" id = "Browse" type="button" onclick="toggleBrowse()">Browse</button>
+        <button class = "nav-button" id = "Favorites" type="button" onclick="toggleFavorites()">Favorites</button>
+        <button class = "nav-button" id = "About_Us" type="button" onclick="toggleAboutUs()">About Us</button>
     </div>
 </div>
 
-<div class="filters">
+<div class="filterButtonContainer">
   <button onclick="filterByDiet('Vegetarian')">Vegetarian</button>
   <button onclick="filterByDiet('Vegan')">Vegan</button>
   <button onclick="filterByDiet('Gluten-Free')">Gluten-Free</button>
@@ -36,22 +38,22 @@
 </div>
 
 
-  <main>
-    <div id = "mainsection">
-        <p>starting bit, basically browse, but without clicking first</p>
-    </div>
-    <div id="browse" style="display:none;">
-        <p>starting bit, basically browse, but without clicking first</p>
+<main>
+  <div id="mainsection">
+      <!-- Replace all static cards with this single container -->
+      <div id="meal-cards-container" class="container">
+          <!-- Dynamic cards will be inserted here by JavaScript -->
       </div>
+  </div>
 
-      <div id="favorites" style="display:none;">
-        <p>Z</p>
-      </div>
+  <div id="favorites" style="display:none;">
+    <p>Z</p>
+  </div>
 
-      <div id="about_us" style="display:none;">
-        <p>bruh</p>
-      </div>
-  </main>
+  <div id="about_us" style="display:none;">
+    <p>bruh</p>
+  </div>
+</main>
 
 
   <footer>
