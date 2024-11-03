@@ -20,7 +20,6 @@
     <div class = "navigation">
         <button class = "nav-button" id = "Browse" type="button" onclick="toggleBrowse()">Browse</button>
         <button class = "nav-button" id = "Favorites" type="button" onclick="toggleFavorites()">Favorites</button>
-        <button class = "nav-button" id = "About_Us" type="button" onclick="toggleAboutUs()">About Us</button>
     </div>
 </div>
 
@@ -38,9 +37,9 @@
 
   <main>
     <div id = "mainsection">
-      <div class="container">
         <div class="card-container">
           <div class="card">
+            <button class="favorite-btn">★</button>
               <div class="card-image">
                   <img src="meddeli.png" alt="Mediterranean">
               </div>
@@ -62,6 +61,7 @@
           </div>
       
           <div class="card">
+            <button class="favorite-btn">★</button>
               <div class="card-image">
                   <img src="roots-banner.jpg" alt="Roots">
               </div>
@@ -81,88 +81,90 @@
               </div>
           </div>
       </div>
-        </div>
-  
-  
-        <div class="card-container"></div>
-          <div class="card">
-              <div class="card-image">
-                  <img src="meddeli.png" alt="Mediterranean">
-              </div>
-              <div class="card-text">
-                  <h3 class = "title">Mediterranean Deli</h3>
-                  <div class = "content">
-                  <p class = "description">Mystery Mediterranean Box</p>
-                  <div class="price-distance">  <!-- Add this container -->
-                      <p>$6.50</p>
-                      <p>0.3 mi</p>
-                  </div>
-                  <p class = "time">8:00 PM - 9:00 PM</p>
-                  <div class = "filters">
-                      <p>Vegetarian</p>
-                      <p>Lactose-Free</p>
-                  </div>
-              </div>
-              </div>
-          </div>
-      
-          <div class="card">
-              <div class="card-image">
-                  <img src="roots-banner.jpg" alt="Roots">
-              </div>
-              <div class="card-text">
-                  <h3 class= "title">Roots</h3>
-                  <div class = "content">
-                  <p class = "description">Mystery Roots Bowl</p>
-                  <div class="price-distance">  <!-- Add this container -->
-                      <p>$5.00</p>
-                      <p>2.0 mi</p>
-                  </div>
-                  <p class = "time">5:00 PM - 7:00 PM</p>
-                  <div class = "filters">
-                      <p>Vegetarian</p>
-                  </div>
-              </div>
-              </div>
-          </div>
-        </div>
-    <div id="browse" style="display:none;">
-      <div class="container">
+
+
       <div class="card-container">
         <div class="card">
+          <button class="favorite-btn">★</button>
             <div class="card-image">
-                <img src="meddeli.png" alt="Mediterranean">
+                <img src="produce.jpeg" alt="grocery">
             </div>
             <div class="card-text">
-                <h3 class = "title">Mediterranean Deli</h3>
+                <h3 class = "title">Harris Teeter</h3>
                 <div class = "content">
-                <p class = "description">Mystery Mediterranean Box</p>
+                <p class = "description">Mystery Produce Bag</p>
                 <div class="price-distance">  <!-- Add this container -->
-                    <p>$6.50</p>
-                    <p>0.3 mi</p>
+                    <p>$3.00</p>
+                    <p>1.5 mi</p>
                 </div>
-                <p class = "time">8:00 PM - 9:00 PM</p>
+                <p class = "time">4:00 PM - 6:00 PM</p>
                 <div class = "filters">
                     <p>Vegetarian</p>
                     <p>Lactose-Free</p>
+                    <p>Vegan</p>
+                    <p>Gluten-Free</p>
                 </div>
             </div>
             </div>
         </div>
     
         <div class="card">
+            <button class="favorite-btn">★</button>
             <div class="card-image">
-                <img src="roots-banner.jpg" alt="Roots">
+                <img src="starbucks.png" alt="Epilogue">
             </div>
             <div class="card-text">
-                <h3 class= "title">Roots</h3>
+                <h3 class= "title">Epilogue</h3>
                 <div class = "content">
-                <p class = "description">Mystery Roots Bowl</p>
+                <p class = "description">Mystery Pastries Bag</p>
                 <div class="price-distance">  <!-- Add this container -->
-                    <p>$6.50</p>
-                    <p>0.3 mi</p>
+                    <p>$2.50</p>
+                    <p>3.0 mi</p>
                 </div>
-                <p class = "time">8:00 PM - 9:00 PM</p>
+                <p class = "time">6:00 PM - 8:00 PM</p>
+                <div class = "filters">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+          <button class="favorite-btn">★</button>
+            <div class="card-image">
+                <img src="wholefoods.png" alt="grocery">
+                  </div>
+                  <div class="card-text">
+                      <h3 class = "title">Whole Foods</h3>
+                      <div class = "content">
+                      <p class = "description">Mystery Prepared Foods Boxes</p>
+                      <div class="price-distance">  <!-- Add this container -->
+                          <p>$7.00</p>
+                          <p>1.8 mi</p>
+                      </div>
+                      <p class = "time">8:30 PM - 9:30 PM</p>
+                      <div class = "filters">
+                          <p>Gluten-Free</p>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <button class="favorite-btn">★</button>
+            <div class="card-image">
+                <img src="bread.png" alt="Bread">
+            </div>
+            <div class="card-text">
+                <h3 class= "title">Weaver Street Market</h3>
+                <div class = "content">
+                <p class = "description">Mystery Bread Bundle</p>
+                <div class="price-distance">  <!-- Add this container -->
+                    <p>$4.00</p>
+                    <p>0.8 mi</p>
+                </div>
+                <p class = "time">7:00 PM - 8:00 PM</p>
                 <div class = "filters">
                     <p>Vegetarian</p>
                 </div>
@@ -170,61 +172,261 @@
             </div>
         </div>
     </div>
+
+
+        <div class="card-container">
+            <div class="card">
+              <button class="favorite-btn">★</button>
+                <div class="card-image">
+                    <img src="quechula.png" alt="Quechua">
+                      </div>
+                      <div class="card-text">
+                          <h3 class = "title">Cosmic Cantina</h3>
+                          <div class = "content">
+                          <p class = "description">Mystery Burrito Box</p>
+                          <div class="price-distance">  <!-- Add this container -->
+                              <p>$5.50</p>
+                              <p>0.2 mi</p>
+                          </div>
+                          <p class = "time">9:00 PM - 10:00 PM</p>
+                          <div class = "filters">
+                              <p>Vegetarian</p>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        
+            <div class="card">
+                <button class="favorite-btn">★</button>
+                <div class="card-image">
+                    <img src="traderjoe.png" alt="Trader Joes">
+                </div>
+                <div class="card-text">
+                    <h3 class= "title">Trader Joes</h3>
+                    <div class = "content">
+                    <p class = "description">Mystery Snack Box</p>
+                    <div class="price-distance">  
+                        <p>$4.50</p>
+                        <p>2.2 mi</p>
+                    </div>
+                    <p class = "time">8:00 PM - 9:00 PM</p>
+                    <div class = "filters">
+
+                    </div>
+                </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!--BROWSING SECTION IS A COPY OF THE MAIN SECTION-->
+<div id="browse" style="display:none;">
+    <div class="card-container">
+      <div class="card">
+        <button class="favorite-btn">★</button>
+          <div class="card-image">
+              <img src="meddeli.png" alt="Mediterranean">
+          </div>
+          <div class="card-text">
+              <h3 class = "title">Mediterranean Deli</h3>
+              <div class = "content">
+              <p class = "description">Mystery Mediterranean Box</p>
+              <div class="price-distance">  <!-- Add this container -->
+                  <p>$6.50</p>
+                  <p>0.3 mi</p>
+              </div>
+              <p class = "time">8:00 PM - 9:00 PM</p>
+              <div class = "filters">
+                  <p>Vegetarian</p>
+                  <p>Lactose-Free</p>
+              </div>
+          </div>
+          </div>
       </div>
+  
+      <div class="card">
+        <button class="favorite-btn">★</button>
+          <div class="card-image">
+              <img src="roots-banner.jpg" alt="Roots">
+          </div>
+          <div class="card-text">
+              <h3 class= "title">Roots</h3>
+              <div class = "content">
+              <p class = "description">Mystery Roots Bowl</p>
+              <div class="price-distance">  <!-- Add this container -->
+                  <p>$6.50</p>
+                  <p>0.3 mi</p>
+              </div>
+              <p class = "time">8:00 PM - 9:00 PM</p>
+              <div class = "filters">
+                  <p>Vegetarian</p>
+              </div>
+          </div>
+          </div>
+      </div>
+  </div>
 
 
-      <div class="card-container"></div>
+  <div class="card-container">
+    <div class="card">
+      <button class="favorite-btn">★</button>
+        <div class="card-image">
+            <img src="produce.jpeg" alt="grocery">
+        </div>
+        <div class="card-text">
+            <h3 class = "title">Harris Teeter</h3>
+            <div class = "content">
+            <p class = "description">Mystery Produce Bag</p>
+            <div class="price-distance">  <!-- Add this container -->
+                <p>$3.00</p>
+                <p>1.5 mi</p>
+            </div>
+            <p class = "time">4:00 PM - 6:00 PM</p>
+            <div class = "filters">
+                <p>Vegetarian</p>
+                <p>Lactose-Free</p>
+                <p>Vegan</p>
+                <p>Gluten-Free</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <button class="favorite-btn">★</button>
+        <div class="card-image">
+            <img src="starbucks.png" alt="Epilogue">
+        </div>
+        <div class="card-text">
+            <h3 class= "title">Epilogue</h3>
+            <div class = "content">
+            <p class = "description">Mystery Pastries Bag</p>
+            <div class="price-distance">  <!-- Add this container -->
+                <p>$2.50</p>
+                <p>3.0 mi</p>
+            </div>
+            <p class = "time">6:00 PM - 8:00 PM</p>
+            <div class = "filters">
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-container">
+    <div class="card">
+      <button class="favorite-btn">★</button>
+        <div class="card-image">
+            <img src="wholefoods.png" alt="grocery">
+              </div>
+              <div class="card-text">
+                  <h3 class = "title">Whole Foods</h3>
+                  <div class = "content">
+                  <p class = "description">Mystery Prepared Foods Boxes</p>
+                  <div class="price-distance">  <!-- Add this container -->
+                      <p>$7.00</p>
+                      <p>1.8 mi</p>
+                  </div>
+                  <p class = "time">8:30 PM - 9:30 PM</p>
+                  <div class = "filters">
+                      <p>Gluten-Free</p>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <button class="favorite-btn">★</button>
+        <div class="card-image">
+            <img src="bread.png" alt="Bread">
+        </div>
+        <div class="card-text">
+            <h3 class= "title">Weaver Street Market</h3>
+            <div class = "content">
+            <p class = "description">Mystery Bread Bundle</p>
+            <div class="price-distance">  <!-- Add this container -->
+                <p>$4.00</p>
+                <p>0.8 mi</p>
+            </div>
+            <p class = "time">7:00 PM - 8:00 PM</p>
+            <div class = "filters">
+                <p>Vegetarian</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="card-container">
         <div class="card">
+          <button class="favorite-btn">★</button>
             <div class="card-image">
-                <img src="meddeli.png" alt="Mediterranean">
-            </div>
-            <div class="card-text">
-                <h3 class = "title">Mediterranean Deli</h3>
-                <div class = "content">
-                <p class = "description">Mystery Mediterranean Box</p>
-                <div class="price-distance">  <!-- Add this container -->
-                    <p>$6.50</p>
-                    <p>0.3 mi</p>
-                </div>
-                <p class = "time">8:00 PM - 9:00 PM</p>
-                <div class = "filters">
-                    <p>Vegetarian</p>
-                    <p>Lactose-Free</p>
-                </div>
-            </div>
+                <img src="quechula.png" alt="Quechua">
+                  </div>
+                  <div class="card-text">
+                      <h3 class = "title">Cosmic Cantina</h3>
+                      <div class = "content">
+                      <p class = "description">Mystery Burrito Box</p>
+                      <div class="price-distance">  <!-- Add this container -->
+                          <p>$5.50</p>
+                          <p>0.2 mi</p>
+                      </div>
+                      <p class = "time">9:00 PM - 10:00 PM</p>
+                      <div class = "filters">
+                          <p>Vegetarian</p>
+                      </div>
+                  </div>
             </div>
         </div>
     
         <div class="card">
+            <button class="favorite-btn">★</button>
             <div class="card-image">
-                <img src="roots-banner.jpg" alt="Roots">
+                <img src="traderjoe.png" alt="Trader Joes">
             </div>
             <div class="card-text">
-                <h3 class= "title">Roots</h3>
+                <h3 class= "title">Trader Joes</h3>
                 <div class = "content">
-                <p class = "description">Mystery Roots Bowl</p>
-                <div class="price-distance">  <!-- Add this container -->
-                    <p>$5.00</p>
-                    <p>2.0 mi</p>
+                <p class = "description">Mystery Snack Box</p>
+                <div class="price-distance">  
+                    <p>$4.50</p>
+                    <p>2.2 mi</p>
                 </div>
-                <p class = "time">5:00 PM - 7:00 PM</p>
+                <p class = "time">8:00 PM - 9:00 PM</p>
                 <div class = "filters">
-                    <p>Vegetarian</p>
+
                 </div>
             </div>
             </div>
         </div>
-      </div>
-
+    </div>  
+</div>
 
 
       <div id="favorites" style="display:none;">
-        <p>Z</p>
+        <div class="card">
+            <button class="favorite-btn" id="roots-favorite">★</button>
+              <div class="card-image">
+                  <img src="roots-banner.jpg" alt="Roots">
+              </div>
+              <div class="card-text">
+                  <h3 class= "title">Roots</h3>
+                  <div class = "content">
+                  <p class = "description">Mystery Roots Bowl</p>
+                  <div class="price-distance">  <!-- Add this container -->
+                      <p>$6.50</p>
+                      <p>0.3 mi</p>
+                  </div>
+                  <p class = "time">8:00 PM - 9:00 PM</p>
+                  <div class = "filters">
+                      <p>Vegetarian</p>
+                  </div>
+              </div>
+              </div>
+        </div>
       </div>
 
-      <div id="about_us" style="display:none;">
-        <p>bruh</p>
-      </div>
   </main>
 
 
@@ -235,6 +437,6 @@
   </footer>
 
   <script src="javascript/homescript.js"></script>
-    
+  <script src="javascript/favorites.js"></script>
 </body>
 </html>
