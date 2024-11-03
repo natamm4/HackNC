@@ -7,12 +7,12 @@ body, html {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column; /* Stacks the title and main vertically */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   height: 100vh; 
   background-color: #ABC8D9;
-  text-align: center; /* Centers content horizontally */
+  text-align: center; 
 
 }
 
@@ -20,10 +20,44 @@ body, html {
   font-size: 4em;
   margin-bottom: 30px;
   color: #345678;
+  text-shadow: 
+    -1px -1px 0 rgba(255,255,255,0.8),
+    1px -1px 0 rgba(255,255,255,0.8),
+    -1px 1px 0 rgba(255,255,255,0.8),
+    1px 1px 0 rgba(255,255,255,0.8),
+    0 0 10px rgba(255,255,255,0.5);
 }
 
 button {
-  cursor: pointer;
+  margin: 10px 0;
+  padding: 20px 40px;
+  font-size: 1.5em;
+  border-radius: 0.5rem;
+  background-color: #89A2B8;
+  color: white;
+  border: 2px solid #345678;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #345678;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#submitButton {
+  background-color: #89A2B8;
+  border-radius: 0.5rem;
+  color: #345678;
+  border: 2px solid #345678;
 }
 
 #main_shadow_box {
@@ -110,8 +144,13 @@ button {
 #submitButton{
   background-color: #89A2B8;
   border-radius: .25rem;
-  color: #345678;
+  color: white;
   border: 2px solid #345678;
+}
+
+#submitButton:hover{
+  background-color: #345678;
+  color: white;
 }
 
 #aboutinfo{
