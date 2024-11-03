@@ -36,8 +36,9 @@ function displayMealCards(cards) {
     container.innerHTML = '';
     
     cards.forEach(card => {
+        const clickHandler = card.id === 1 ? 'onclick="window.location.href=\'roots.html\'"' : '';
         const cardElement = `
-            <div class="card" data-id="${card.id}">
+            <div class="card" data-id="${card.id}" ${clickHandler} style="${card.id === 1 ? 'cursor: pointer;' : ''}">
                 <div class="card-image">
                     <img src="${card.image}" alt="${card.itemTitle}">
                 </div>
