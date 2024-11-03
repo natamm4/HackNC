@@ -13,12 +13,44 @@ struct HomePage: View {
         NavigationStack {
             ZStack {
                 Color.uncBlue.ignoresSafeArea()
-                VStack {
-                    Text("Heels & Meals").font(.largeTitle)
-                    Text("About Us").font(.headline)
-                    Text("")
+                VStack(spacing: 20) {
+                    ZStack {
+                        Circle()
+                            .fill(.almostWhite)
+                            .frame(width: 220, height: 220)
+                        
+                        Image("Logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                            .clipShape(Circle())
+                    }
+                    .padding(.top, 30)
+                    
+                    Text("Heels & Meals")
+                        .font(.system(size: 48, weight: .bold))
+                        .foregroundColor(.footGrey)
+                    
+                    Spacer()
+                    
                     NavigationLink(destination: LoginPage()) {
-                        Text("Login").font(.title).padding().background().foregroundColor(.black).cornerRadius(30)
+                        Text("Login")
+                            .font(.system(size: 30, weight: .bold))
+                            .frame(width: 200)
+                            .padding()
+                            .background()
+                            .foregroundColor(.footGrey)
+                            .cornerRadius(30)
+                    }
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: AboutUsView()) {
+                        Text("About Us")
+                            .font(.headline)
+                            .padding()
+                            .background(.almostWhite)
+                            .cornerRadius(15)
                     }
                 }
             }
