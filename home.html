@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class = "headerbox">
-        <div id = "titlebox">
+        <div id = "titlebox" 
+        onclick="window.location.href='index.html'"
+        style="cursor: pointer;">
         <h1 id = "title">
             Heels & Meals
         </h1>
@@ -20,6 +22,17 @@
         <button class = "nav-button" id = "Favorites" type="button" onclick="toggleFavorites()">Favorites</button>
         <button class = "nav-button" id = "About_Us" type="button" onclick="toggleAboutUs()">About Us</button>
     </div>
+</div>
+
+<div class="filters">
+  <button onclick="filterByDiet('Vegetarian')">Vegetarian</button>
+  <button onclick="filterByDiet('Vegan')">Vegan</button>
+  <button onclick="filterByDiet('Gluten-Free')">Gluten-Free</button>
+  <button onclick="filterByDiet('Lactose-Free')">Lactose-Free</button>
+  <button onclick="filterByVendor('Restaurant')">Restaurants</button>
+  <button onclick="filterByVendor('Grocery')">Groceries</button>
+  <button onclick="filterByVendor('Bakery')">Bakeries</button>
+  <button onclick="clearFilters()">Clear Filters</button>
 </div>
 
 
