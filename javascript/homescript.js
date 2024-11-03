@@ -1,12 +1,14 @@
 function toggleBrowse() {
-    const browse = document.getElementById('mainsection');
+    const browse = document.getElementById('browse');
     const favorites = document.getElementById('favorites');
     const about_us = document.getElementById('about_us');
-
-    if (browse.style.display !== 'block') {
-      browse.style.display = 'block';
+    const mainsection = document.getElementById('mainsection');
+    
+    if (browse.style.display !== 'flex') {
+      browse.style.display = 'flex';
       about_us.style.display = 'none';
       favorites.style.display = 'none';
+      mainsection.style.display = 'none';
   }
   }
   
